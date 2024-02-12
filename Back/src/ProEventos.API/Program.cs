@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using ProEventosRevisao;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
@@ -8,17 +7,29 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Sqlite;
+using ProEventos.Persistence.Contextos;
+using ProEventos.Application.Contratos;
+using ProEventos.Application;
+using ProEventos.Persistence.Contratos;
+using ProEventosRevisao;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 string mysSqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<DataContext>(options =>
+builder.Services.AddDbContext<ProEventosContext>(options =>
 options.UseSqlite(mysSqlConnection));
 
+builder.Services.AddControllers()
+                .AddNewtonsoftJson(
+                    x=> x.SerializerSettings.ReferenceLoopHandling =
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
+builder.Services.AddScoped<IEventoService, EventoService>();
+builder.Services.AddScoped<IGeralPersist, GeralPersist>();
+builder.Services.AddScoped <IEventoPersist, EventoPersist>();
 
-
-builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors();

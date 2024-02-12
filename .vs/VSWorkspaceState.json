@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Back",
+    "\\Back\\src",
+    "\\Back\\src\\ProEventos.API",
+    "\\Back\\src\\ProEventos.Application\\Contratos",
+    "\\Back\\src\\ProEventos.Persistence\\bin\\Release",
+    "\\Back\\src\\ProEventos.Persistence\\Contextos",
+    "\\Back\\src\\ProEventos.Persistence\\Migrations"
+  ],
+  "SelectedNode": "\\Back\\src\\ProEventos.API\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}
