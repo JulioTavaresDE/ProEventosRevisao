@@ -6,16 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
-
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     //imports: [RouterOutlet, PalestrantesComponent, EventosComponent,HttpClientModule,NavComponent,BrowserAnimationsModule,CollapseModule]
-    imports: [RouterOutlet, PalestrantesComponent, EventosComponent,HttpClientModule,NavComponent]
+    imports: [RouterOutlet, PalestrantesComponent, EventosComponent,HttpClientModule,NavComponent,HttpClientModule]
 
   })
 export class AppComponent {
