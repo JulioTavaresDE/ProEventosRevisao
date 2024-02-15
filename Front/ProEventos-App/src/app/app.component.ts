@@ -5,6 +5,7 @@ import { EventosComponent } from "./eventos/eventos.component";
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 @Component({
     selector: 'app-root',
@@ -12,7 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
     //imports: [RouterOutlet, PalestrantesComponent, EventosComponent,HttpClientModule,NavComponent,BrowserAnimationsModule,CollapseModule]
-    imports: [RouterOutlet, PalestrantesComponent, EventosComponent,HttpClientModule,NavComponent,HttpClientModule]
+    imports: [RouterOutlet, PalestrantesComponent, EventosComponent,HttpClientModule,NavComponent,HttpClientModule,CollapseModule]
 
   })
 export class AppComponent {
