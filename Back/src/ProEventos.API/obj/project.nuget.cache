@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sd4fo+C+dB5IETNgJoHeKdnHN/XmdtBKGXKkXX1Y/l5gEu4j4FdyXS8eiI1Nm3m+zUG4AIXiZxCC+VamxE+07w==",
+  "dgSpecHash": "o7So3GFept99lnfe2DXZ12WEDDBQwY0wa2H0vCE+qk7/0v9jKMKTjmspxRACEQDGm2mJXimn7urXabh+ILDlyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julio\\OneDrive\\Área de Trabalho\\Udemy\\Codigo_Julio\\FullStack\\ProEventosRevisao\\Back\\src\\ProEventos.API\\ProEventos.API.csproj",
+  "projectFilePath": "C:\\Users\\julio\\OneDrive\\Área de Trabalho\\Udemy\\Codigo_Julio\\FullStack\\ProEventosRevisao\\back\\src\\ProEventos.API\\ProEventos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julio\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\julio\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",

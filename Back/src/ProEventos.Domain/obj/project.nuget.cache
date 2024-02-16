@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J8ufru+V6p1jZTeN4BlELobtEhPN24GnLifvPEjpq5/XPKWQ4urWoCE0axY47iuw5FcuFDDcBYUuYbvZ1bRWJQ==",
+  "dgSpecHash": "enLDL5IrdSdWA1FsE5PcD4m9qSaUcNhTewB0tqqAli8oH5Ag+si0DlTNuXaYyQoUo+SmzLQCENxyR6BSdUia4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\julio\\OneDrive\\Área de Trabalho\\Udemy\\Codigo_Julio\\FullStack\\ProEventosRevisao\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
+  "projectFilePath": "C:\\Users\\julio\\OneDrive\\Área de Trabalho\\Udemy\\Codigo_Julio\\FullStack\\ProEventosRevisao\\back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julio\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\julio\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

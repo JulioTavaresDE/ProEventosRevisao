@@ -1,29 +1,26 @@
-import { DateTimeFormatPipe } from './../helpers/DateTimeFormat.pipe';
-import { Constants } from './../util/constants';
-import { EventoService } from './../services/evento.service';
+
+
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { from } from 'rxjs';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Evento } from '../../../models/Evento';
+import { EventoService } from '../../../services/evento.service';
 import { CommonModule } from '@angular/common';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
-import { Evento } from '../models/Evento';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
-import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 
 @Component({
-  selector: 'app-eventos',
+  selector: 'app-evento-listagem',
   standalone: true,
   imports: [CommonModule,CollapseModule,FormsModule,TooltipModule,BsDropdownModule,ToastrModule],
-  templateUrl: './eventos.component.html',
-  styleUrl: './eventos.component.scss',
-  providers:[EventoService,DateTimeFormatPipe,BsModalService,BsModalRef]
-
+  templateUrl: './evento-listagem.component.html',
+  styleUrl: './evento-listagem.component.scss'
 })
-export class EventosComponent implements OnInit {
-  modalRef?: BsModalRef;
+export class EventoListagemComponent implements OnInit {
+
+modalRef?: BsModalRef;
 public eventos: Evento[] = [];
 public eventosFiltrados: Evento[] = [];
 public widthImg : number = 200;
@@ -85,6 +82,5 @@ public getEventos():void{
   decline(): void {
     this.modalRef?.hide();
   }
-
 
 }
