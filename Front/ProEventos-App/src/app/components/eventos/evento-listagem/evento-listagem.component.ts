@@ -10,11 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
-
+import { Router } from '@angular/router';
+import { UserComponent } from '../../user/user.component';
 @Component({
   selector: 'app-evento-listagem',
   standalone: true,
-  imports: [CommonModule,CollapseModule,FormsModule,TooltipModule,BsDropdownModule,ToastrModule],
+  imports: [CommonModule,CollapseModule,FormsModule,TooltipModule,BsDropdownModule,ToastrModule,UserComponent],
   templateUrl: './evento-listagem.component.html',
   styleUrl: './evento-listagem.component.scss'
 })
@@ -45,20 +46,20 @@ public filtrarEventos(filtrarPor:string):Evento[] {
   );
 }
 
-
 public alterarImagem():void{
   this.mostrarImagem = !this.mostrarImagem;
 }
 
 constructor(private eventoService:EventoService,
-            private modalService: BsModalService
+            private modalService: BsModalService,
+            private router: Router
             //private spinner: NgxSpinnerService
+
   ) {}
   public ngOnInit(): void {
     this.getEventos();
 
   }
-
 
 public getEventos():void{
   this.eventoService.getEventos().subscribe({
@@ -69,7 +70,6 @@ public getEventos():void{
       error: (error:any) => console.log(error)
     });
   }
-
 
   openModal(template: TemplateRef<void>) :void {
     this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
@@ -83,4 +83,7 @@ public getEventos():void{
     this.modalRef?.hide();
   }
 
+  detalheEvento(id:number):void{
+    this.router.navigate([`eventos/detalhe/${id}`]);
+  }
 }
