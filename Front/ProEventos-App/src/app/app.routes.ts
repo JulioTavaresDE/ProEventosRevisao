@@ -2,7 +2,7 @@ import { Evento } from './models/Evento';
 import { EventoListagemComponent } from './components/eventos/evento-listagem/evento-listagem.component';
 import { Routes } from '@angular/router';
 import { EventosComponent } from './components/eventos/eventos.component';
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { EventoDetalheComponent } from './components/eventos/evento-detalhe/evento-detalhe.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PalestrantesComponent } from './components/palestrantes/palestrantes.component';
@@ -11,15 +11,20 @@ import { PerfilComponent } from './components/user/perfil/perfil.component';
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { RouterModule } from '@angular/router';
+import { AppModule } from './app.module';
+
 
 export const routes: Routes = [
   { path:'user', component:UserComponent,
     children:[
-      { path:'login',component:LoginComponent },
+      //{ path:'login',component:LoginComponent },
       { path:'registration',component:RegistrationComponent }
     ]
   },
   { path:'user/perfil',component:PerfilComponent },
+  { path:'user/login',component:LoginComponent },
+
   { path:'eventos', redirectTo:'eventos/lista' },
 
   {
@@ -38,3 +43,9 @@ export const routes: Routes = [
 {path:'', redirectTo: 'dashboard', pathMatch:'full' },
 {path:'**', redirectTo: 'dashboard', pathMatch:'full' },
 ];
+
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
+})
+export class AppRoutesModule {}

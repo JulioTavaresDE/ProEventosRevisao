@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -8,6 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-  //isCollapsed = true;
   isCollapsed = false;
+
+  constructor(private router: Router){}
+
+  ngOnInit(): void {
+  }
+
+  showMenu():boolean{
+      return false;
+  }
+
 }
